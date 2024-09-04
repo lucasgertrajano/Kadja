@@ -1351,55 +1351,79 @@ span {
       border-color: transparent var(--timeline-panel-bg-color) transparent transparent;
     }
   }
-
   .image-carousel {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px 0;
+    position: relative;
+    overflow: hidden; /* Esconde as imagens fora da área de visualização */
+    background: #f5f5f5; /* Fundo leve para destacar as imagens */
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 .slider-container {
-    width: 100%;
-    height: 100%;
-}
-
-.slider-wrapper {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    transition: transform 0.5s ease-in-out; /* Animação suave para a transição das imagens */
 }
 
 .slider-item {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: auto;
-    height: auto;
+    min-width: 100%;
+    box-sizing: border-box;
 }
 
 .slider-item img {
-    max-width: 100%;
-    max-height: 500px;
+    width: 100%;
+    height: auto;
     border-radius: 10px;
-    border: 2px solid #ccc; /* Adiciona uma borda à imagem */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    object-fit: contain; /* Mantém a proporção da imagem */
+    border: 4px solid #fff; /* Borda branca mais espessa */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    object-fit: cover;
 }
 
+/* Botões de navegação */
 .slider-button-next,
 .slider-button-prev {
-    color: #000; /* Cor dos botões de navegação */
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
 }
 
+.slider-button-next {
+    right: 10px;
+}
+
+.slider-button-prev {
+    left: 10px;
+}
+
+/* Bolinhas de paginação */
 .slider-pagination-bullet {
-    background: #000; /* Cor das bolinhas de paginação */
-    opacity: 1; /* Garante que as bolinhas sejam visíveis */
+    width: 12px;
+    height: 12px;
+    margin: 0 5px;
+    background: #000;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
 }
 
 .slider-pagination-bullet-active {
-    background: #ff0000; /* Cor da bolinha ativa */
+    background: #ff0000;
 }
+
 
 
   
