@@ -1,15 +1,12 @@
 /*========== menu icon navbar ==========*/
 
-
 let menuIcon = document.querySelector('#menu-icon');
 let navbar = document.querySelector('.navbar');
-
 
 menuIcon.onclick = () => {
     menuIcon.classList.toggle('bx-x');
     navbar.classList.toggle('active');
 };
-
 
 /*========== scroll sections active link ==========*/
 let sections = document.querySelectorAll('section');
@@ -30,21 +27,16 @@ window.onscroll = () => {
         };
     });
 
+    /*========== sticky navbar ==========*/
+    let header = document.querySelector('.header');
 
-/*========== sticky navbar ==========*/
-let header = document.querySelector('.header');
+    header.classList.toggle('sticky', window.scrollY > 100);
 
-header.classList.toggle('sticky', window.scrollY > 100);
-
-
-/*========== remove menu icon navbar when click navbar link (scroll) ==========*/
-menuIcon.classList.remove('bx-x');
-navbar.classList.remove('active');
-
+    /*========== remove menu icon navbar when click navbar link (scroll) ==========*/
+    menuIcon.classList.remove('bx-x');
+    navbar.classList.remove('active');
 };
 
-
-/*========== swiper ==========*/
 var swiper = new Swiper(".mySwiper", {
     loop: true,
     autoplay: {
@@ -52,8 +44,7 @@ var swiper = new Swiper(".mySwiper", {
       disableOnInteraction: false,
     },
     slidesPerView: 1,
-    spaceBetween: 50,
-    loop: true,
+    spaceBetween: 0, // Remove o espaço entre os slides para evitar quebra de linha
     grabCursor: true,
     pagination: {
       el: ".swiper-pagination",
@@ -66,11 +57,6 @@ var swiper = new Swiper(".mySwiper", {
 });
 
 
-
-
-
-
-
 /*========== dark light mode ==========*/
 let darkModeIcon = document.querySelector('#darkMode-icon');
 
@@ -78,6 +64,7 @@ darkModeIcon.onclick = () => {
     darkModeIcon.classList.toggle('bx-sun');
     document.body.classList.toggle('dark-mode');
 };
+
 
 
 /*========== scroll reveal ==========*/
