@@ -953,7 +953,65 @@ span {
     }
 }
 
+.icon-whatsapp-flutuante{
+  width: 50px;
+  height: 50px;
+  background-image: url(../images/icon-whatsapp.png);
+  
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: fixed;
+  bottom: 1%;
+  right: 3px;
+  z-index: 999;
+}
+.numero-whats{
+  margin-top: 20px;
+  padding-left: 14%;
+}
 
+.numero-whats img, .numero-whats .wp{
+  display: inline-block;
+}
+
+.numero-whats img{
+  width: 35px;
+  height: 35px;
+}
+
+.numero-whats p{
+  vertical-align:text-top;
+  margin-left: 5px;
+  font-size: 17px;
+  color: #263147;
+}
+
+.numero-whats a{
+  position: relative;
+  display: block;
+  padding-left: 8px;
+  top: -5px;
+  font-size: 15px;
+}
+
+@media screen and (max-width: 460px){
+  .email{
+      padding-left: 2%;
+  }
+  .numero-whats{
+      padding-left: 2%;
+  }
+  
+  .direitos-autorais h6{
+      text-align: center;
+  }
+  .direitos-autorais p{
+      position: relative;
+      width: 100%;
+      text-align: center;
+  }
+}
 
 .page-section {
     padding: 4rem 0;
