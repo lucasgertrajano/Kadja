@@ -70,12 +70,35 @@
 
               </p>
   
-            <div class="btn-group">
-              <a href="#" class="btn btn-primary">Marque sua visita agora!</a>
-
-
+              <div class="btn-group">
+                <a href="#" class="btn btn-primary" id="show-form">Marque sua visita agora!</a>
+              </div>
               
-            </div>
+              <div id="tripetto-2owcza" style="display: none;"></div> <!-- O formulário está oculto inicialmente -->
+              
+              <!-- Adicionando scripts do Tripetto -->
+              <script src="https://cdn.jsdelivr.net/npm/@tripetto/runner"></script>
+              <script src="https://cdn.jsdelivr.net/npm/@tripetto/runner-chat"></script>
+              <script src="https://cdn.jsdelivr.net/npm/@tripetto/studio"></script>
+              
+              <script>
+                // Função para inicializar o formulário
+                function initTripettoForm() {
+                  TripettoStudio.form({
+                    runner: TripettoChat,
+                    token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoidVZJekdtT01FNGZ3cVdreUl5VHlPMUE1V2x6TDZlZU11Z21OTVFTNjd2Zz0iLCJkZWZpbml0aW9uIjoiVlFZR2x1ckUyNFJKZktnZ2NLSkFnd25pbCtEUTJvODFXaG8zRGZFMXVSTT0iLCJ0eXBlIjoiY29sbGVjdCJ9.05N63R6-O_6I2f5jPh2ICgYVkGSztqIqVHqHFL8HPd0",
+                    element: "tripetto-2owcza"
+                  });
+                }
+              
+                // Exibindo o formulário ao clicar no botão
+                document.getElementById("show-form").addEventListener("click", function(event) {
+                  event.preventDefault(); // Previne o comportamento padrão do link
+                  document.getElementById("tripetto-2owcza").style.display = "block"; // Mostra o formulário
+                  initTripettoForm(); // Inicializa o formulário
+                });
+              </script>
+              
   
           </div>
   
@@ -123,17 +146,7 @@
         </div>
     </section>
 
-    <div id="tripetto-2owcza"></div>
-<script src="https://cdn.jsdelivr.net/npm/@tripetto/runner"></script>
-<script src="https://cdn.jsdelivr.net/npm/@tripetto/runner-chat"></script>
-<script src="https://cdn.jsdelivr.net/npm/@tripetto/studio"></script>
-<script>
-TripettoStudio.form({
-    runner: TripettoChat,
-    token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoidVZJekdtT01FNGZ3cVdreUl5VHlPMUE1V2x6TDZlZU11Z21OTVFTNjd2Zz0iLCJkZWZpbml0aW9uIjoiVlFZR2x1ckUyNFJKZktnZ2NLSkFnd25pbCtEUTJvODFXaG8zRGZFMXVSTT0iLCJ0eXBlIjoiY29sbGVjdCJ9.05N63R6-O_6I2f5jPh2ICgYVkGSztqIqVHqHFL8HPd0",
-    element: "tripetto-2owcza"
-});
-</script>
+
 
     <!-- services section design -->
     <section class="services" id="services">
@@ -253,12 +266,6 @@ TripettoStudio.form({
 
     <a href="https://api.whatsapp.com/send?phone=55839158-1263"><div class="icon-whatsapp-flutuante"></div><!-- icon-whatsapp-flutuante --></a>
 
-    <div class="container">
-        <div class="numero-whats">
-            <img src="images/icon-whatsapp.png">
-            <p class="wp">Whatsapp:</p>
-            <p>Kadja Nascimento (83)9 9158-1263<span><a target="_blank" href="https://api.whatsapp.com/send?phone=5583991581263">Acesse pelo link</a></span></p>
-        </div><!-- numero-whats -->
         
 
         <script src="/public/js/effect_whatsapp_flutuante.js"></script>
@@ -570,6 +577,13 @@ TripettoStudio.form({
             <input type="submit" value="Sua Mensagem" class="btn">
         </form>
     </section>
+
+    <div class="container">
+        <div class="numero-whats">
+            <img src="images/icon-whatsapp.png">
+            <p class="wp">Whatsapp:</p>
+            <p>Kadja Nascimento (83)9 9158-1263<span><a target="_blank" href="https://api.whatsapp.com/send?phone=5583991581263">Acesse pelo link</a></span></p>
+        </div><!-- numero-whats -->
 
     <!-- footer design -->
     <footer class="footer">

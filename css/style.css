@@ -46,28 +46,36 @@ body {
 
 /* Ajuste na Seção HERO */
 .hero {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 60px 0;
-    background: linear-gradient(90deg, #ee9208 0%, #f6f5f3 40%, #f3f3f3 50%, #fcf3b8 100%);
-    color: var(--text-color);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 20px;
+  background: linear-gradient(90deg, #ee9208 0%, #f6f5f3 40%, #f3f3f3 50%, #fcf3b8 100%);
 }
 
 .hero .container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.hero .left {
+  width: 50%;
+  padding: 20px;
+}
+.hero .right {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.hero .left,
-.hero .right {
-    width: 95%;
-    padding: 45px;
+.hero .right img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 20px;
 }
 
 .hero .left {
@@ -86,10 +94,44 @@ body {
 }
 
 .hero .right img {
-    max-width: 180%;
+    max-width: 200%;
     height: auto;
     border-radius: 30px;
-    box-shadow: 0 10px 20px rgb(254,43,77);
+    box-shadow: 0 10px 20px rgb(254, 201, 43);
+}
+
+/* Media Queries para dispositivos móveis (telas menores que 768px) */
+@media (max-width: 768px) {
+  .hero {
+      flex-direction: column;
+      padding: 20px;
+  }
+
+  .hero .container {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .hero .left, .hero .right {
+      width: 100%;
+  }
+
+  .hero .left {
+      padding: 20px;
+  }
+
+  .hero .right {
+      margin-top: 20px;
+  }
+
+  .hero .right img {
+      max-width: 80%;
+      border-radius: 10px;
+  }
+
+  .hero .btn-group {
+      margin-top: 20px;
+  }
 }
 
 .hero .btn-group {
@@ -301,7 +343,7 @@ section {
 .home-img img {
     position: absolute;
     bottom: 0;
-    right: 200px;
+    right: 100px;
     pointer-events: none;
     max-width: 800px;
     max-height: 100vh;
