@@ -1475,8 +1475,8 @@ span {
   }
 /* Container principal do carrossel */
 .image-carousel {
-  width: 60%;
-  max-width: 800px;
+  width: 90%;
+  max-width: 1000px;
   margin: 0 auto;
   padding: 20px 0;
   position: relative;
