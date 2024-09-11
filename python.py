@@ -6,8 +6,8 @@ app = Flask(__name__)
 # Configurações de e-mail
 app.config['MAIL_SERVER'] = 'smtp.gmail.com'
 app.config['MAIL_PORT'] = 465
-app.config['MAIL_USERNAME'] = 'seuemail@gmail.com'  # Insira seu e-mail
-app.config['MAIL_PASSWORD'] = 'suasenha'  # Insira sua senha de app
+app.config['MAIL_USERNAME'] = 'kadjanascimento58@gmail.com'  # Insira seu e-mail
+app.config['MAIL_PASSWORD'] = 'kadja123.!'  # Insira sua senha de app
 app.config['MAIL_USE_TLS'] = False
 app.config['MAIL_USE_SSL'] = True
 
@@ -27,7 +27,7 @@ def submit_contact():
 
     # Criando a mensagem de e-mail
     msg = Message(subject=f"Mensagem de {nome}: {assunto}",
-                  sender='seuemail@gmail.com',  # O e-mail remetente (o mesmo das configurações)
+                  sender='kadjanascimento58@gmail.com',  # O e-mail remetente (o mesmo das configurações)
                   recipients=['destinatario@gmail.com'])  # E-mail(s) destinatário(s)
     msg.body = f"""
     Nome: {nome}
