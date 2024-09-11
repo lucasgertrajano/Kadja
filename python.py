@@ -1,4 +1,4 @@
-from flask import Flask, request, render_template
+from flask import Flask, request, render_template # type: ignore
 from flask_mail import Mail, Message
 
 app = Flask(__name__)
